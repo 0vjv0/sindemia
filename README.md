@@ -33,8 +33,4 @@ If the player manages to contact his target character, she or he goes to the nex
 
 If the player complete all three levels, the player wins the game.
 
-The code is available at https://github.com/0vjv0/sindemia
-
-The game can be downloaded at 
-
 
