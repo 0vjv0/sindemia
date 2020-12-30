@@ -1,0 +1,29 @@
+load_resources {
+    sprite_add("npc", "game/assets/images/SceneSprites/negacionistScene.png", 0, 0, 64, 64),
+    sprite_add("virus", "game/assets/images/sprites/cvirus.png", 0, 0, 32, 18),
+    sprite_add("davis", "game/assets/images/SceneSprites/davisScene.png", 0, 0, 64, 64),
+    sprite_add("level", "game/assets/images/level/level3.png", 0, 0, 190, 52),
+}
+all_groups {
+   camera_follow("level01", "npc"),
+}
+group {
+    auto_dialog(365, 30, 0.1, "The doctor and the professor"),
+    auto_dialog(380, 55, 0.1, "have developed a vaccine."),
+
+    sprite_draw("davis", 450, 80, 1, 1),
+    auto_dialog(365, 150, 0.1, "Meet with Agent Davis and"),
+    auto_dialog(385, 175, 0.1, "give her the vaccine."),
+
+
+    sprite_draw("virus", 472, 210, 1, 1),
+    sprite_draw("npc", 450, 225, 1, 1),
+    
+    auto_dialog(370, 295, 0.1, "Some people believe that"),
+    auto_dialog(310, 320, 0.1, "only herd immunity can end the pandemic."),
+    auto_dialog(300, 345, 0.1, "They will chase you to infect you. Watch out."),
+    auto_dialog(300, 380, 0.1, "Hurry, the contagion rate is close to the limit."),  
+
+    sprite_draw("level", 30, 0, 1, 1),
+    sprite_move("level", 0, 460, 8),
+}

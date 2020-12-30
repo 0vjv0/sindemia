@@ -1,0 +1,13 @@
+load_resources {
+  audio_add("sneeze", "game/assets/sounds/sneeze.wav"),
+}
+group {
+  audio_play("sneeze"),
+  wait(0.84)
+}
+group {
+  screen_shake(1, 6, 60),
+  auto_dialog(200, 170, 3, "Sindemia"),
+  wait(3),
+  screen_fade(0, {0, 0, 0, 0})
+}

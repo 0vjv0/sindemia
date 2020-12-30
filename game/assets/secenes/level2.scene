@@ -1,0 +1,26 @@
+load_resources {
+    sprite_add("npc", "game/assets/images/SceneSprites/sneezerScene.png", 0, 0, 64, 64),
+    sprite_add("virus", "game/assets/images/sprites/cvirus.png", 0, 0, 32, 18),
+    sprite_add("profesor", "game/assets/images/SceneSprites/profesorScene.png", 0, 0, 64, 64),
+    sprite_add("level", "game/assets/images/level/level2.png", 0, 0, 190, 52),
+}
+all_groups {
+    camera_follow("level01", "npc"),
+}
+group {
+    auto_dialog(340, 30, 0.1, "Many people have become ill and"),
+    auto_dialog(290, 55, 0.1, "begin to show symptoms, such as sneezing."),
+
+    sprite_draw("profesor", 450, 100, 1, 1),
+    auto_dialog(355, 170, 0.1, "Meet with Professor Val and"),
+    auto_dialog(370, 195, 0.1, "give him the blood samples."),
+
+    sprite_draw("npc", 450, 245, 1, 1),
+    sprite_draw("virus", 466, 265, 1, 1),
+    sprite_move("virus", -50, 20, 8),
+    
+    auto_dialog(330, 315, 0.1, "Avoid the virus spread by sneezers"),
+    auto_dialog(270, 335, 0.1, "Keep an eye on the increase in the contagion rate."),
+    sprite_draw("level", 30, 0, 1, 1),
+    sprite_move("level", 0, 460, 8),
+}
