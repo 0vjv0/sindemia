@@ -1,0 +1,22 @@
+load_resources {
+    sprite_add("npc", "game/assets/images/SceneSprites/npcScene.png", 0, 0, 64, 64),
+    sprite_add("virus", "game/assets/images/sprites/cvirus.png", 0, 0, 32, 18),
+    sprite_add("doctor", "game/assets/images/SceneSprites/doctorScene.png", 0, 0, 64, 64),
+    sprite_add("level", "game/assets/images/level/level1.png", 0, 0, 190, 52),
+}
+all_groups {
+    camera_follow("level01", "npc"),
+}
+group {
+    sprite_draw("doctor", 450, 30, 1, 1),
+    auto_dialog(330, 100, 0.1, "Your mission is to meet Dr. Carrazco and"),
+    auto_dialog(300, 125, 0.1, "receive blood samples from her for research."),
+
+    sprite_draw("virus", 474, 165, 1, 1),
+    sprite_draw("npc", 450, 176, 1, 1),
+    
+    auto_dialog(350, 255, 0.1, "Maintain physical distancing with"),
+    auto_dialog(300, 280, 0.1, "asymptomatic people or you will be infected."),
+    sprite_draw("level", 30, 0, 1, 1),
+    sprite_move("level", 0, 460, 8),
+}
